@@ -1,7 +1,7 @@
 // Mobile API - Production Configuration
 // Uses: VITE_API_URL environment variable
 // For Vercel deployment: https://emrest.ct.ws/api
-const BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000/api';
+const BASE_URL = import.meta.env.VITE_API_URL || 'https://blueviolet-dinosaur-678797.hostingersite.com/';
 
 /**
  * Generic HTTP GET request
