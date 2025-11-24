@@ -2,7 +2,7 @@
 
 ## Overview
 
-Aplikasi mobile sudah terintegrasi penuh dengan emrest.ct.ws dengan flow sebagai berikut:
+Aplikasi mobile sudah terintegrasi penuh dengan blueviolet-dinosaur-678797.hostingersite.com dengan flow sebagai berikut:
 
 ### 1. **Landing & Auth Flow**
 
@@ -225,11 +225,11 @@ try {
 Ubah di `.env`:
 ```bash
 # Development
-VITE_API_URL=http://emrest.ct.ws/api
+VITE_API_URL=https://blueviolet-dinosaur-678797.hostingersite.com/api/mobile
 VITE_DEBUG=true
 
 # Production
-VITE_API_URL=http://emrest.ct.ws/api
+VITE_API_URL=https://blueviolet-dinosaur-678797.hostingersite.com/api/mobile
 VITE_DEBUG=false
 ```
 

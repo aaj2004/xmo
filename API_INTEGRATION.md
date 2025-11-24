@@ -1,8 +1,8 @@
-# Integrasi API emrest.ct.ws
+# Integrasi API blueviolet-dinosaur-678797.hostingersite.com
 
 ## Konfigurasi
 
-Base URL: `http://emrest.ct.ws/api`
+Base URL: `https://blueviolet-dinosaur-678797.hostingersite.com/api/mobile`
 
 ## Authentication
 
@@ -92,12 +92,12 @@ try {
 
 ### Development (.env)
 ```
-VITE_API_URL=http://emrest.ct.ws/api
+VITE_API_URL=http://localhost:8000/api/mobile
 VITE_DEBUG=true
 ```
 
 ### Production (.env.production)
 ```
-VITE_API_URL=http://emrest.ct.ws/api
+VITE_API_URL=https://blueviolet-dinosaur-678797.hostingersite.com/api/mobile
 VITE_DEBUG=false
 ```

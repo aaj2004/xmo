@@ -2,7 +2,7 @@
 
 ## Ringkasan Pekerjaan
 
-Mobile app telah **terintegrasi penuh** dengan emrest.ct.ws dengan flow login dan API integration yang sempurna.
+Mobile app telah **terintegrasi penuh** dengan blueviolet-dinosaur-678797.hostingersite.com dengan flow login dan API integration yang sempurna.
 
 ---
 
@@ -13,7 +13,7 @@ Mobile app telah **terintegrasi penuh** dengan emrest.ct.ws dengan flow login da
 #### File: `src/api/http.js`
 - ✅ HTTP client dengan method GET, POST, PUT, DELETE
 - ✅ Error handling
-- ✅ Base URL ke emrest.ct.ws/api
+- ✅ Base URL ke https://blueviolet-dinosaur-678797.hostingersite.com/api/mobile
 - ✅ JSON request/response handling
 
 #### File: `src/api/auth.js`
@@ -129,7 +129,7 @@ Mobile app telah **terintegrasi penuh** dengan emrest.ct.ws dengan flow login da
 - App info
 
 #### File: `.env`
-- VITE_API_URL=http://emrest.ct.ws/api
+- VITE_API_URL=https://blueviolet-dinosaur-678797.hostingersite.com/api/mobile
 - VITE_DEBUG=false
 
 #### File: `vite.config.js`
@@ -270,7 +270,7 @@ Untuk development lebih lanjut:
 
 **Status:** ✅ PRODUCTION READY
 
-Aplikasi siap digunakan dengan emrest.ct.ws!
+Aplikasi siap digunakan dengan blueviolet-dinosaur-678797.hostingersite.com!
 
 ---
 

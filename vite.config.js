@@ -7,7 +7,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'http://emrest.ct.ws',
+        target: 'https://blueviolet-dinosaur-678797.hostingersite.com',
         changeOrigin: true,
         secure: false,
       }
@@ -28,7 +28,7 @@ export default defineConfig({
 //     proxy: {
 //       // Proxy API requests to external server
 //       '/api': {
-//         target: 'http://emrest.ct.ws',
+//         target: 'https://blueviolet-dinosaur-678797.hostingersite.com',
 //         changeOrigin: true,
 //         secure: false,
 //         // rewrite: (path) => path.replace(/^\/api/, '/api')

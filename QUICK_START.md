@@ -37,7 +37,7 @@ User masukkan email & password
   ↓
 Klik tombol "Masuk"
   ↓
-POST /auth/login ke emrest.ct.ws/api
+POST /auth/login ke https://blueviolet-dinosaur-678797.hostingersite.com/api/mobile
   ↓
 Respon sukses:
   - Token disimpan ke localStorage['token']
@@ -164,7 +164,7 @@ sessionStorage['userAnswers']         // Jawaban user
 
 ## 5. API Endpoints
 
-Base URL: `http://emrest.ct.ws/api`
+Base URL: `https://blueviolet-dinosaur-678797.hostingersite.com/api/mobile`
 
 ### Auth
 ```

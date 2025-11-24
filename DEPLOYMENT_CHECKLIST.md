@@ -3,7 +3,7 @@
 ## Pre-Deployment
 
 ### Environment Check
-- [x] `.env.local` updated: `VITE_API_URL=https://emrest.ct.ws/sp-faringitis/api/mobile`
+- [x] `.env.local` updated: `VITE_API_URL=https://blueviolet-dinosaur-678797.hostingersite.com/api/mobile`
 - [x] `vercel.json` created (for SPA routing)
 - [x] `.gitignore` configured properly
 - [x] `http.js` updated with correct comments
@@ -11,7 +11,7 @@
 ### Backend Verification
 ```bash
 # Test backend endpoint
-curl https://emrest.ct.ws/sp-faringitis/api/mobile/gejala.php
+curl https://blueviolet-dinosaur-678797.hostingersite.com/api/mobile/gejala.php
 # Expected: {"success":true,"message":"Symptoms list retrieved","data":[...]}
 ```
 
@@ -49,7 +49,7 @@ git push -u origin main
 2. Add:
    ```
    Name: VITE_API_URL
-   Value: https://emrest.ct.ws/sp-faringitis/api/mobile
+   Value: https://blueviolet-dinosaur-678797.hostingersite.com/api/mobile
    ```
 3. Save
 
@@ -76,7 +76,7 @@ git push -u origin main
 - Check browser console for errors
 - Check Vercel deployment logs
 - Monitor API response times
-- Check database logs on emrest.ct.ws
+- Check database logs on blueviolet-dinosaur-678797.hostingersite.com
 
 ## Files Changed
 
@@ -94,5 +94,5 @@ git push -u origin main
 All files are configured correctly:
 - Environment variables set
 - SPA routing configured
-- Backend URL pointing to emrest.ct.ws
+- Backend URL pointing to blueviolet-dinosaur-678797.hostingersite.com
 - Build configuration ready

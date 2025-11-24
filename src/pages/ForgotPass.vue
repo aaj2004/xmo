@@ -132,6 +132,17 @@
 <script setup>
 import { ref } from 'vue'
 
+const DEFAULT_API_BASE = 'https://blueviolet-dinosaur-678797.hostingersite.com/api/mobile'
+const apiBaseUrl = import.meta.env.VITE_API_URL || DEFAULT_API_BASE
+
+let forgotPasswordUrl = 'https://blueviolet-dinosaur-678797.hostingersite.com/forgot.php'
+try {
+  const parsed = new URL(apiBaseUrl)
+  forgotPasswordUrl = `${parsed.origin}/forgot.php`
+} catch (error) {
+  console.warn('Invalid API base URL, falling back to default forgot password endpoint.', error)
+}
+
 const email = ref('')
 const isLoading = ref(false)
 const errorMessage = ref('')
@@ -166,7 +177,7 @@ const handleSubmit = async () => {
     console.log('Sending forgot password request...', email.value)
 
     // Send to backend
-    const response = await fetch('http://emrest.ct.ws/forgot.php', {
+    const response = await fetch(forgotPasswordUrl, {
       method: 'POST',
       credentials: 'include',
       body: data

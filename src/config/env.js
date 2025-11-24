@@ -4,7 +4,7 @@
 
 const ENV = {
   // API Configuration
-  API_URL: import.meta.env.VITE_API_URL || 'http://emrest.ct.ws/api',
+  API_URL: import.meta.env.VITE_API_URL || 'https://blueviolet-dinosaur-678797.hostingersite.com/api/mobile',
   
   // Feature flags
   DEBUG_MODE: import.meta.env.VITE_DEBUG === 'true',

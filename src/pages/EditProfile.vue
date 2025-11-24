@@ -162,7 +162,7 @@
         </button>
         <button
           @click="handleSave"
-          :disabled="isLoading"
+          :disabled="isLoading || isFetchingProfile"
           class="flex-1 py-3.5 bg-gradient-to-r from-violet-600 to-purple-600 text-white font-bold rounded-xl shadow-lg shadow-violet-300 active:scale-95 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
         >
           <svg v-if="isLoading" class="w-5 h-5 inline-block mr-2 animate-spin" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -177,6 +177,7 @@
 
 <script setup>
 import { ref, onMounted } from 'vue'
+import { getProfile, updateProfile as updateProfileApi } from '../api/mobile/profile.js'
 
 const formData = ref({
   name: '',
@@ -186,37 +187,32 @@ const formData = ref({
 })
 
 const isLoading = ref(false)
+const isFetchingProfile = ref(false)
 const errorMessage = ref('')
 const successMessage = ref('')
 
-// Load current user data
-onMounted(async () => {
+const loadProfile = async () => {
+  isFetchingProfile.value = true
   try {
-    const response = await fetch('http://emrest.ct.ws/api/profile.php', {
-      method: 'GET',
-      credentials: 'include',
-    })
+    const data = await getProfile()
+    const user = data?.user || data
     
-    if (response.ok) {
-      const data = await response.json()
-      if (data.success && data.user) {
-        formData.value.name = data.user.name || ''
-        formData.value.email = data.user.email || ''
-        formData.value.phone = data.user.phone || ''
-        formData.value.address = data.user.address || ''
-      }
-    }
+    formData.value.name = user?.name || ''
+    formData.value.email = user?.email || ''
+    formData.value.phone = user?.phone || ''
+    formData.value.address = user?.address || ''
+    
+    errorMessage.value = ''
   } catch (error) {
     console.error('Error loading profile:', error)
-    // Fallback dummy data
-    formData.value = {
-      name: 'Ahmad Rizki',
-      email: 'ahmad@email.com',
-      phone: '08123456789',
-      address: 'Jl. Contoh No. 123, Jakarta'
-    }
+    errorMessage.value = error.message || 'Gagal memuat data profil.'
+  } finally {
+    isFetchingProfile.value = false
   }
-})
+}
+
+// Load current user data
+onMounted(loadProfile)
 
 const changeAvatar = () => {
   alert('Fitur upload foto profil segera hadir!')
@@ -237,36 +233,19 @@ const handleSave = async () => {
   successMessage.value = ''
 
   try {
-    const data = new FormData()
-    data.append('name', formData.value.name)
-    data.append('phone', formData.value.phone || '')
-    data.append('address', formData.value.address || '')
+    await updateProfileApi(formData.value.name)
+    successMessage.value = 'Profil berhasil diperbarui!'
+    
+    // Refresh profile data
+    await loadProfile()
 
-    console.log('Updating profile...', formData.value)
-
-    const response = await fetch('http://emrest.ct.ws/api/update_profile.php', {
-      method: 'POST',
-      credentials: 'include',
-      body: data
-    })
-
-    const result = await response.json()
-    console.log('Response:', result)
-
-    if (result.success) {
-      successMessage.value = 'Profil berhasil diperbarui!'
-      
-      // Redirect after 1.5 seconds
-      setTimeout(() => {
-        window.history.back()
-      }, 1500)
-    } else {
-      errorMessage.value = result.message || 'Gagal memperbarui profil'
-    }
-
+    // Redirect after 1.5 seconds
+    setTimeout(() => {
+      window.history.back()
+    }, 1500)
   } catch (error) {
     console.error('Update error:', error)
-    errorMessage.value = 'Terjadi kesalahan. Silakan coba lagi.'
+    errorMessage.value = error.message || 'Terjadi kesalahan. Silakan coba lagi.'
   } finally {
     isLoading.value = false
   }

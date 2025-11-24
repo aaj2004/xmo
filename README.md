@@ -1,6 +1,6 @@
 # Sistem Pakar Diagnosis - Mobile App
 
-Mobile application untuk diagnosa kesehatan berbasis AI menggunakan Vue 3 + Vite, terintegrasi dengan API emrest.ct.ws.
+Mobile application untuk diagnosa kesehatan berbasis AI menggunakan Vue 3 + Vite, terintegrasi dengan API blueviolet-dinosaur-678797.hostingersite.com.
 
 ## Features
 
@@ -80,13 +80,13 @@ src/
 Edit `.env` untuk mengubah API endpoint:
 
 ```env
-VITE_API_URL=http://emrest.ct.ws/api
+VITE_API_URL=https://blueviolet-dinosaur-678797.hostingersite.com/api/mobile
 VITE_DEBUG=false
 ```
 
 ## API Integration
 
-Aplikasi terintegrasi dengan emrest.ct.ws API. Lihat `API_INTEGRATION.md` untuk dokumentasi lengkap endpoint.
+Aplikasi terintegrasi dengan blueviolet-dinosaur-678797.hostingersite.com API. Lihat `API_INTEGRATION.md` untuk dokumentasi lengkap endpoint.
 
 ## Authentication Flow
 
@@ -172,7 +172,7 @@ npm run test
 - Verify token is saved: `localStorage.getItem('token')`
 
 ### API not responding
-- Verify emrest.ct.ws is accessible
+- Verify blueviolet-dinosaur-678797.hostingersite.com is accessible
 - Check VITE_API_URL in .env
 - Check browser Network tab for CORS issues
 
@@ -192,4 +192,3 @@ For issues & questions, contact the development team.
 ---
 
 Last Updated: November 2024
-

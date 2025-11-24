@@ -4,15 +4,15 @@
 
 ### 1. ✅ `.env.local` - UPDATED
 ```env
-VITE_API_URL=https://emrest.ct.ws/sp-faringitis/api/mobile
+VITE_API_URL=https://blueviolet-dinosaur-678797.hostingersite.com/api/mobile
 ```
-**Perubahan:** Updated dari localhost ke production emrest.ct.ws
+**Perubahan:** Updated dari localhost ke production blueviolet-dinosaur-678797.hostingersite.com
 
 ---
 
 ### 2. ✅ `.env.example` - UPDATED
 ```env
-VITE_API_URL=https://emrest.ct.ws/sp-faringitis/api/mobile
+VITE_API_URL=https://blueviolet-dinosaur-678797.hostingersite.com/api/mobile
 # Plus: Added examples untuk local dan custom domain
 ```
 **Perubahan:** Updated dengan production example + comments
@@ -76,7 +76,7 @@ Semua file sudah di-setup untuk production.
 3. **Deploy ke Vercel**
    - Go: https://vercel.com
    - New Project → Import Git Repo
-   - Set env var: `VITE_API_URL=https://emrest.ct.ws/sp-faringitis/api/mobile`
+   - Set env var: `VITE_API_URL=https://blueviolet-dinosaur-678797.hostingersite.com/api/mobile`
    - Click Deploy!
 
 4. **Verify Production**
@@ -89,7 +89,7 @@ Semua file sudah di-setup untuk production.
 
 | File | Status | Change |
 |------|--------|--------|
-| `.env.local` | ✅ Updated | API URL → emrest.ct.ws |
+| `.env.local` | ✅ Updated | API URL → blueviolet-dinosaur-678797.hostingersite.com |
 | `.env.example` | ✅ Updated | Added production example |
 | `src/api/http.js` | ✅ Updated | Comments updated |
 | `vercel.json` | ✅ Created | NEW - SPA routing |
