@@ -114,7 +114,7 @@
           <div class="text-center">
             <p class="text-sm text-gray-600">
               Belum punya akun?
-              <a href="/register" class="font-bold bg-gradient-to-r from-violet-600 to-purple-600 bg-clip-text text-transparent hover:opacity-80">
+              <a href="/regist" class="font-bold bg-gradient-to-r from-violet-600 to-purple-600 bg-clip-text text-transparent hover:opacity-80">
                 Daftar di sini
               </a>
             </p>
