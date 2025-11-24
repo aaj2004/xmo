@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+/* Biar kelihatan bedanya */
+html, body, #app {
+  height: 100%;
+}
+
+body {
+  @apply bg-slate-100 text-slate-800;
+}
