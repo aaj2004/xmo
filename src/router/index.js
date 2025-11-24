@@ -18,7 +18,7 @@ const routes = [
   { path: '/profile', name: 'Profile', component: ProfileUser, meta: { requiresAuth: true } },
   { path: '/editprofile', name: 'EditProfile', component: EditProfile, meta: { requiresAuth: true } },
   { path: '/login', name: 'Login', component: Login, meta: { requiresAuth: false } },
-  { path: '/register', name: 'Daftar', component: Registrasi, meta: { requiresAuth: false } },
+  { path: '/regist', name: 'Daftar', component: Registrasi, meta: { requiresAuth: false } },
   { path: '/forgot', name: 'ForgotPass', component: ForgotPass, meta: { requiresAuth: false } }
 ]
 
